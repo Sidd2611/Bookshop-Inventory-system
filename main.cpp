@@ -5,6 +5,12 @@ GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP
 C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
 Code, Compile, Run and Debug online from anywhere in world.
 
+
+
+
+
+
+
 *******************************************************************************/
 #include <iostream>
 #include <string.h>
@@ -57,11 +63,17 @@ void book::showdata(){
     cout<<"\nPrice:"<<*price;
     cout<<"\nStock position: "<<*stock;
 }
+
+
+
 int book::search(char tbuy[20],char abuy[20]){
     if(strcmp(tbuy,title)==0 && strcmp(abuy,author)==0)
     return 1;
     else return 0;
 }
+
+
+
 void book::buybook(){
     int count;
     cout<<"\nEnter Number of Books to buy: ";
@@ -71,6 +83,10 @@ void book::buybook(){
     cout<<"\nBooks Brought Succesfully";
     cout<<"\nAmount: Rs. "<<(*price)*count;
 }
+    
+    
+    
+    
 else
 cout<<"\nRequired copies not in stock";
 
@@ -80,7 +96,10 @@ int main()
 book *B[20];
 int i=0,r,t,choice;
 char titlebuy[20],authorbuy[20];
-while(1)    {
+while(1)    
+
+
+{
      cout<<"\n\n\t\tMENU"
      <<"\n1. Enter of New Book"
      <<"\n2. Buy Book"
@@ -95,6 +114,11 @@ while(1)    {
                i++;
                break;
          
+             
+             
+             
+             
+             
         case 2:cin.ignore();
         cout<<"\nEnter Title of Book: ";  cin.getline(titlebuy,20);
         cout<<"Enter Author of Book: ";   cin.getline(authorbuy,20);
@@ -104,6 +128,11 @@ while(1)    {
             break;
         }
      }
+             
+             
+             
+             
+             
          if(t==1)
          cout<<"\nThis Book is not in Stock";
          break;
@@ -117,10 +146,17 @@ while(1)    {
                B[t]->showdata();
                break;
            }
+             
+             
+             
+             
+             
           if(t==i)
           cout<<"\nThis Book is Not in Stock";
           break;
 
+             
+             
         case 4:cin.ignore();
         cout<<"\nEnter title of Book: "; cin.getline(titlebuy,20);
         cout<<"Enter Author of Book: ";cin.getline(authorbuy,20);
@@ -140,6 +176,9 @@ while(1)    {
         default: cout<<"\nInvalid choice Entered"; 
 
 
+             
+             
+             
 
 
 }
